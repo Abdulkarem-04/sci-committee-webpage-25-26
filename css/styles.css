@@ -370,7 +370,7 @@ input:focus, textarea:focus, select:focus {
 
 .hero-content p {
     font-size: 1.25rem;
-    color: var(--gray-300);
+    color: var(--gray-50);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -907,12 +907,21 @@ section:nth-child(even) {
 /*}*/
 
 .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--gray-900);
     color: var(--gray-400);
     text-align: center;
+    font-size: 0.8rem;
     padding: 10px 20px;
     margin-top: 0;
     border-top: 1px solid var(--gray-800); /* Optional visual separator */
+}
+
+.footer img {
+    max-width: 180px;
 }
 
 /* =========================================

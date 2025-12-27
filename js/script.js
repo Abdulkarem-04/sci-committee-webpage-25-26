@@ -10,6 +10,14 @@ const navHeight = 70;
 const committeeData = {
     advisors: [
         {
+            name: 'Associate Professor Dr. Basheer Riskhan',
+            image: 'assets/images/members_avatar/#',
+            role: 'Dean',
+            team: 'Advisory Board',
+            country: 'Sri Lanka',
+            linkedin: '#'
+        },
+        {
             name: 'Ridwan Afolabi Muhammad',
             image: 'assets/images/members_avatar/#',
             role: 'Student Advisor',
@@ -17,46 +25,39 @@ const committeeData = {
             country: 'Nigeria',
             linkedin: '#'
         },
-        {
-            name: 'Dean (Name)',
-            image: 'assets/images/members_avatar/#',
-            role: 'Dean',
-            team: 'Advisory Board',
-            country: 'Country',
-            linkedin: '#'
-        }
+
     ],
     topCommittee: [
         {
-            name: 'Thomas Chit Ko Ko',
+            name: 'Chit Ko Ko',
             image: 'assets/images/members_avatar/#',
             role: 'President',
-            team: 'Executive Board',
+            team: 'Top Committee',
             country: 'Myanmar',
             linkedin: '#'
         },
         {
-            name: 'Anas Muhammed',
+            name: 'Anas Sani Lawal Muhammed',
             image: 'assets/images/members_avatar/#',
             role: 'Vice-President',
-            team: 'Executive Board',
-            country: 'Country',
+            team: 'Top Committee',
+            country: 'Nigeria',
             linkedin: '#'
         },
         {
-            name: 'Fathima Wazhna',
+            name: 'Fathima Wazna Mohamed Sarafathulla',
             image: 'assets/images/members_avatar/#',
             role: 'Secretary',
-            team: 'Executive Board',
-            country: 'Country',
+            team: 'Top Committee',
+            country: 'Sri Lanka',
             linkedin: '#'
         },
         {
-            name: 'Nurullah',
+            name: 'Win Yan Naing Htut',
             image: 'assets/images/members_avatar/#',
             role: 'Treasurer',
-            team: 'Executive Board',
-            country: 'Country',
+            team: 'Top Committee',
+            country: 'Myanmar',
             linkedin: '#'
         }
     ],
@@ -163,7 +164,7 @@ const eventsData = {
             date: 'January 1, 2026',
             time: '2:00 AM - 10:00 PM',
             venue: '',
-            description: '» SCI will launch their official webpage, featuring SCI committee values, all members with their key details, event system which will showcase the upcoming and pass events, a comment system that every can share their thoughts, and last but not the lease, an official contacts.',
+            description: '» SCI will launch their official webpage, featuring SCI committee values, all members with their key details, event system which will showcase the upcoming and pass events, a comment system that every can share their thoughts, and last but not the least, an official contacts.',
             poster: 'assets/images/logos/SCI committee Logo.png'
         },
 
@@ -236,7 +237,7 @@ function initHeroSlider() {
     const slides = document.querySelectorAll('.slide');
     if (slides.length === 0) return;
     let currentSlideIndex = 0;
-    const slideDuration = 2000;
+    const slideDuration = 3000;
 
     function goToNextSlide() {
         slides[currentSlideIndex].classList.remove('active');
