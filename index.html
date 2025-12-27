@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCI Committee 2025/26 - School of Computing & Informatics</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html">
+                <div class="nav-logos">
+                    <div class="logo-placeholder uni-logo">
+                        <img src="assets/images/logos/AIU-Official-Logo-01.png" alt="SCI Logo">
+                    </div>
+                    <div class="logo-placeholder sci-logo">
+                        <img src="assets/images/logos/SCI%20committee%20Logo.png" alt="SCI Logo">
+                    </div>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#teams" class="nav-link">Teams</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#comments" class="nav-link">Comments</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image:url('assets/images/hero/BG-TEMP-1.JPG')"></div>
+            <div class="slide" style="background-image:url('assets/images/hero/BG-TEMP-2.JPG')"></div>
+            <div class="slide" style="background-image:url('assets/images/hero/BG-TEMP-3.JPG')"></div>
+            <div class="slide" style="background-image:url('assets/images/hero/BG-TEMP-4.JPG')"></div>
+            <div class="slide" style="background-image:url('assets/images/hero/BG-TEMP-0.JPG')"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1>SCI Committee 2025/26</h1>
+            <p>School of Computing & Informatics</p>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Who We Are</h3>
+                    <p>The SCI Committee is the backbone of the School of Computing & Informatics student community. We represent and advocate for our students, organizing events, initiatives, and fostering innovation across all computing disciplines.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Our Mission</h3>
+                    <p>To create opportunities for students to grow academically, professionally, and personally through collaborative initiatives, knowledge sharing, and community engagement in the field of computing and technology.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Our Vision</h3>
+                    <p>To be a leading student committee that champions innovation, excellence, and inclusivity, preparing the next generation of computing professionals to make a global impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAMS SECTION -->
+    <section id="teams" class="teams">
+        <div class="container">
+            <h2 class="section-title">Meet Our Leadership</h2>
+            
+            <!-- Advisors -->
+            <div class="team-category">
+                <h3 class="category-title">Advisors</h3>
+                <div class="members-grid centered" id="advisorsGrid"></div>
+            </div>
+
+            <!-- Top Committee -->
+            <div class="team-category">
+                <h3 class="category-title">Executive Board</h3>
+                <div class="members-grid centered" id="topCommitteeGrid"></div>
+            </div>
+
+            <!-- Team Leaders -->
+            <div class="team-category">
+                <h3 class="category-title">Team Leaders</h3>
+                <div class="members-grid centered" id="leadersGrid"></div>
+            </div>
+
+            <!-- Team Members -->
+            <div class="team-category">
+                <h3 class="category-title">Team Members</h3>
+                <div class="members-grid centered" id="membersGrid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTS SECTION -->
+    <section id="events" class="events">
+        <div class="container">
+            <h2 class="section-title">Events</h2>
+
+            <!-- Upcoming Events -->
+            <div class="events-category">
+                <h3 class="category-title">Upcoming Events</h3>
+                <div class="events-list" id="upcomingEventsContainer"></div>
+            </div>
+
+            <!-- Past Events -->
+            <div class="events-category">
+                <h3 class="category-title">Past Events</h3>
+                <div class="events-list" id="pastEventsContainer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMENTS SECTION -->
+    <section id="comments" class="comments-section">
+        <div class="container">
+            <h2 class="section-title">Visitor Comments</h2>
+            
+            <div class="comments-wrapper">
+                <!-- Comment Input -->
+                <div class="comment-input-box">
+                    <h3>Share Your Thoughts</h3>
+                    <form id="commentForm">
+                        <input type="text" id="commentName" placeholder="Your Name" required>
+                        <textarea id="commentText" placeholder="Your Comment..." rows="4" required></textarea>
+                        <button type="submit" class="btn-primary">Post Comment</button>
+                    </form>
+                </div>
+
+                <!-- Comments Feed -->
+                <div class="comments-feed">
+                    <div class="comments-header">
+                        <h3>Comments (Most Recent First)</h3>
+                    </div>
+                    <div class="comments-list" id="commentsList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <a href="mailto:sci@aiu.edu.my">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>sci@aiu.edu.my</p>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <a href="https://www.linkedin.com/company/school-of-computing-informatics-committee-aiu/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <p>Follow us on LinkedIn</p>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        <p>@scicommittee</p>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <a href="https://wa.me/+2348135959589" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p>Message us</p>
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <a href="https://faisal-khrisan.github.io/SCI-Student-Committee/#executive" target="_blank">
+                        <i class="fa-solid fa-globe"></i>
+                        <p>24/25 Committee</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p><small>&copy; 2025/26 SCI Committee. All rights reserved.</small></p>
+        <p><small>Al-Bukhary International University | School of Computing & Informatics</small></p>
+    </footer>
+
+    <!-- Modal for Event Details -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCI Committee - Al Bukhary International University</title>
+    <style>
+        :root {
+            --color-primary-green: #5CB85C;
+            --color-dark-navy: #1F2121;
+            --color-light-green: #7EC97E;
+            --color-teal: #32B8C6;
+            --color-accent-green: #2E8B57;
+            --color-text-dark: #1F2121;
+            --color-text-light: #FFFFFF;
+            --color-bg-light: #F8F9FA;
+            --color-border: #E0E0E0;
+            --transition-speed: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text-dark);
+            background-color: #FFFFFF;
+        }
+
+        /* ===== Navigation ===== */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--color-dark-navy);
+        }
+
+        .nav-logo span {
+            color: var(--color-primary-green);
+            margin-left: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--color-text-dark);
+            font-weight: 500;
+            transition: color var(--transition-speed);
+            position: relative;
+        }
+
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary-green);
+            transition: width var(--transition-speed);
+        }
+
+        .nav-menu a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            position: relative;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--color-dark-navy) 0%, #2C3E50 100%);
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(92, 184, 92, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background-color: rgba(50, 184, 198, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: var(--color-primary-green);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-speed);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary-green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent-green);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(92, 184, 92, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--color-dark-navy);
+        }
+
+        /* ===== Teams Section ===== */
+        .teams {
+            padding: 4rem 2rem;
+            background-color: var(--color-bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 0.5rem;
+            color: var(--color-text-dark);
+        }
+
+        .section-title span {
+            color: var(--color-primary-green);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1rem;
+        }
+
+        .teams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all var(--transition-speed);
+            border-left: 4px solid transparent;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+            border-left-color: var(--color-primary-green);
+        }
+
+        .team-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .team-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-dark);
+        }
+
+        .team-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== About Section ===== */
+        .about {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+            margin-bottom: 1rem;
+            color: var(--color-text-dark);
+        }
+
+        .about-text h2 span {
+            color: var(--color-primary-green);
+        }
+
+        .about-text p {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-highlight {
+            background-color: rgba(92, 184, 92, 0.1);
+            border-left: 4px solid var(--color-primary-green);
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+        }
+
+        /* ===== Executive Section ===== */
+        .executive {
+            padding: 4rem 2rem;
+            background-color: var(--color-bg-light);
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all var(--transition-speed);
+            text-align: center;
+        }
+
+        .member-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .member-avatar {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--color-primary-green), var(--color-teal));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .member-info {
+            padding: 1.5rem;
+        }
+
+        .member-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: var(--color-text-dark);
+        }
+
+        .member-role {
+            color: var(--color-primary-green);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-info p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* ===== Events Section ===== */
+        .events {
+            padding: 4rem 2rem;
+        }
+
+        .events-list {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+
+        .event-item {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: white;
+            border-left: 4px solid var(--color-primary-green);
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all var(--transition-speed);
+        }
+
+        .event-item:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-date {
+            color: var(--color-primary-green);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--color-text-dark);
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: var(--color-dark-navy);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--color-primary-green);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        .footer-section a:hover {
+            color: var(--color-primary-green);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* ===== Responsive Design ===== */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+                color: var(--color-dark-navy);
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .teams {
+                padding: 2rem 1rem;
+            }
+
+            .teams-grid {
+                gap: 1.5rem;
+            }
+
+            .executive {
+                padding: 2rem 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-logo span {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .members-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">
+            SCI <span>Committee</span>
+        </div>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#teams">Teams</a></li>
+            <li><a href="#executive">Executive</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>School of Computing & <span>Informatics</span></h1>
+            <p>Driving innovation through technology. Building the next generation of tech leaders at Al Bukhary International University.</p>
+            <div class="hero-cta">
+                <a href="#teams" class="btn btn-primary">Explore Teams</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams Section -->
+    <section class="teams" id="teams">
+        <h2 class="section-title">Our <span>Teams</span></h2>
+        <p class="section-subtitle">Specialized teams driving innovation across different domains</p>
+        <div class="teams-grid">
+            <div class="team-card">
+                <div class="team-icon">💡</div>
+                <h3>Tech & Innovation</h3>
+                <p>Leading cutting-edge technology initiatives and fostering innovation within the computing community.</p>
+            </div>
+            <div class="team-card">
+                <div class="team-icon">🎓</div>
+                <h3>Academic Excellence</h3>
+                <p>Supporting student success through mentorship, workshops, and academic resources.</p>
+            </div>
+            <div class="team-card">
+                <div class="team-icon">🤝</div>
+                <h3>Community & Events</h3>
+                <p>Building a vibrant community through engaging events, networking, and collaboration.</p>
+            </div>
+            <div class="team-card">
+                <div class="team-icon">🌟</div>
+                <h3>Professional Development</h3>
+                <p>Preparing students for industry success with career guidance and skill development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About <span>SCI Committee</span></h2>
+                <p>The School of Computing & Informatics Committee is the backbone of student engagement and innovation at Al Bukhary International University.</p>
+                <p>We are dedicated to creating meaningful experiences through technology, fostering intellectual growth, and building connections that last beyond the classroom.</p>
+                <div class="about-highlight">
+                    <strong>Our Mission:</strong> Empowering students to become innovators, leaders, and changemakers in the technology industry.
+                </div>
+                <p>Through collaborative initiatives, workshops, and events, we bridge the gap between academic learning and real-world application.</p>
+            </div>
+            <div style="background: linear-gradient(135deg, var(--color-primary-green), var(--color-teal)); height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                🚀
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Section -->
+    <section class="executive" id="executive">
+        <h2 class="section-title">Meet the <span>Executive Team</span></h2>
+        <p class="section-subtitle">25/26 Leadership - Leading with vision and passion</p>
+        <div class="members-grid">
+            <div class="member-card">
+                <div class="member-avatar">👤</div>
+                <div class="member-info">
+                    <h4>Abdulkarem (Abzed)</h4>
+                    <div class="member-role">Tech & Innovation Leader</div>
+                    <p>Driving innovation and transforming ideas into reality.</p>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">👤</div>
+                <div class="member-info">
+                    <h4>Team Member Name</h4>
+                    <div class="member-role">Role Title</div>
+                    <p>Add member bio here</p>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">👤</div>
+                <div class="member-info">
+                    <h4>Team Member Name</h4>
+                    <div class="member-role">Role Title</div>
+                    <p>Add member bio here</p>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">👤</div>
+                <div class="member-info">
+                    <h4>Team Member Name</h4>
+                    <div class="member-role">Role Title</div>
+                    <p>Add member bio here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events" id="events">
+        <h2 class="section-title">Upcoming <span>Events</span></h2>
+        <p class="section-subtitle">Stay tuned for exciting initiatives and workshops</p>
+        <div class="events-list">
+            <div class="event-item">
+                <div class="event-date">January 2026</div>
+                <h4>Tech Talk Series Begins</h4>
+                <p>Join us for insightful discussions with industry professionals on the latest in computing and informatics.</p>
+            </div>
+            <div class="event-item">
+                <div class="event-date">February 2026</div>
+                <h4>Innovation Hackathon</h4>
+                <p>Showcase your skills and collaborate with peers in our annual hackathon event.</p>
+            </div>
+            <div class="event-item">
+                <div class="event-date">March 2026</div>
+                <h4>Career & Professional Development Workshop</h4>
+                <p>Prepare yourself for the industry with resume reviews, interview tips, and networking opportunities.</p>
+            </div>
+            <div class="event-item">
+                <div class="event-date">April 2026</div>
+                <h4>Year-End Celebration</h4>
+                <p>Celebrate achievements and build lasting connections with fellow members and guests.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SCI</h4>
+                <ul>
+                    <li><a href="#about">Our Mission</a></li>
+                    <li><a href="#teams">Our Teams</a></li>
+                    <li><a href="#executive">Leadership</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">AIU Official Site</a></li>
+                    <li><a href="#">Computing School</a></li>
+                    <li><a href="#">Student Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <ul>
+                    <li><a href="#">📧 Email</a></li>
+                    <li><a href="#">📱 Instagram</a></li>
+                    <li><a href="#">💼 LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025/2026 SCI Committee, Al Bukhary International University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll enhancement
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.15)';
+            } else {
+                nav.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
