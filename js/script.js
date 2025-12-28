@@ -56,7 +56,7 @@ const committeeData = {
     leaders: [
         {
             name: 'Ridwan Afolabi Muhammad',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/##',
             role: 'Committee Advisor',
             team: 'Advisory Board',
             country: 'Nigeria',
