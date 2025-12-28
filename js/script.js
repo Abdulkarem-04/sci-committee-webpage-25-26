@@ -17,14 +17,6 @@ const committeeData = {
             country: 'Sri Lanka',
             linkedin: '#'
         },
-        {
-            name: 'Ridwan Afolabi Muhammad',
-            image: 'assets/images/members_avatar/#',
-            role: 'Student Advisor',
-            team: 'Advisory Board',
-            country: 'Nigeria',
-            linkedin: 'www.linkedin.com/in/ridwan-m-8105381b2'
-        },
 
     ],
     topCommittee: [
@@ -62,6 +54,14 @@ const committeeData = {
         }
     ],
     leaders: [
+        {
+            name: 'Ridwan Afolabi Muhammad',
+            image: 'assets/images/members_avatar/#',
+            role: 'Committee Advisor',
+            team: 'Advisory Board',
+            country: 'Nigeria',
+            linkedin: 'www.linkedin.com/in/ridwan-m-8105381b2'
+        },
         {
             name: 'Aung Zay Yan Phyo',
             image: 'assets/images/members_avatar/#',
