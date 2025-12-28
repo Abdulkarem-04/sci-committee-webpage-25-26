@@ -803,7 +803,10 @@ section:nth-child(even) {
     box-shadow: var(--shadow-lg);
 }
 
-
+.tap-text {
+    margin: 5px 5px;
+    color: var(--text-light);
+}
 
 /* =========================================
    7. COMMENTS SECTION
