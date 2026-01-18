@@ -11,7 +11,7 @@ const committeeData = {
     advisors: [
         {
             name: 'Associate Professor Dr. Basheer Riskhan',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Basheer-Riskhan.jpeg',
             role: 'Dean',
             team: 'Advisory Board',
             country: 'Sri Lanka',
@@ -22,7 +22,7 @@ const committeeData = {
     topCommittee: [
         {
             name: 'Chit Ko Ko',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Chit-Ko-Ko.jpg',
             role: 'President',
             team: 'Top Committee',
             country: 'Myanmar',
@@ -30,7 +30,7 @@ const committeeData = {
         },
         {
             name: 'Anas Sani Lawal Muhammed',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Anas-Sani-Lawal-Muhammed.jpg',
             role: 'Vice-President',
             team: 'Top Committee',
             country: 'Nigeria',
@@ -38,7 +38,7 @@ const committeeData = {
         },
         {
             name: 'Fathima Wazna Mohamed Sarafathulla',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Fathima-Wazna-Mohamed-Sarafathulla.png',
             role: 'Secretary',
             team: 'Top Committee',
             country: 'Sri Lanka',
@@ -46,7 +46,7 @@ const committeeData = {
         },
         {
             name: 'Win Yan Naing Htut',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Win-yan-Naing-Htut.jpeg',
             role: 'Treasurer',
             team: 'Top Committee',
             country: 'Myanmar',
@@ -56,7 +56,7 @@ const committeeData = {
     leaders: [
         {
             name: 'Ridwan Afolabi Muhammad',
-            image: 'assets/images/members_avatar/##',
+            image: 'assets/images/members_avatar/Ridwan-Afolabi-muhammad.jpg',
             role: 'Committee Advisor',
             team: 'Advisory Board',
             country: 'Nigeria',
@@ -72,7 +72,7 @@ const committeeData = {
         },
         {
             name: 'Nay Paing Oo',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Nay-paing-Oo.jpg',
             role: 'Leader',
             team: 'Academic Support & Development',
             country: 'Myanmar',
@@ -80,7 +80,7 @@ const committeeData = {
         },
         {
             name: 'Maryam Hussaina',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Maryam-Hussaina.png',
             role: 'Leader',
             team: 'Event and Logistics',
             country: 'Sri Lanka',
@@ -88,7 +88,7 @@ const committeeData = {
         },
         {
             name: 'Abdou Salam Sisawo',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Abdou-Salam-Sisawo.jpeg',
             role: 'Leader',
             team: 'Welfare & Engagement',
             country: 'Gambia',
@@ -96,7 +96,7 @@ const committeeData = {
         },
         {
             name: 'Aya Tarig Salaheldein Bashir',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Aya-Tarig-Salaheldein-Bashir.jpg',
             role: 'Leader',
             team: 'Community Outreach & Collaboration',
             country: 'Sudan',
@@ -112,7 +112,7 @@ const committeeData = {
         },
         {
             name: 'Ishmam Siddique',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Ishmam-Siddique.jpg',
             role: 'Leader',
             team: 'Sports & Recreation',
             country: 'Bangladesh',
@@ -121,34 +121,34 @@ const committeeData = {
     ],
     members: [
         // Media & Social Communication
-        { name: 'Sebire Hakyar', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Media & Social Communication', country: 'Türkiye', linkedin: '#' },
-        { name: 'Nur Jumairah Binti Shaffri', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Media & Social Communication', country: 'Malaysia', linkedin: '#' },
-        { name: 'Abdullah Safras Ahamed', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Media & Social Communication', country: 'Sri Lanka', linkedin: 'https://www.linkedin.com/in/abdullah-safras-07201b3a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+        { name: 'Sebire Hakyar', image: 'assets/images/members_avatar/Sebire-Hakyar.jpg', role: 'Member', team: 'Media & Social Communication', country: 'Türkiye', linkedin: '#' },
+        { name: 'Nur Jumairah Binti Shaffri', image: 'assets/images/members_avatar/Nur-Jumairah-Binti-Shaffri.jpg', role: 'Member', team: 'Media & Social Communication', country: 'Malaysia', linkedin: '#' },
+        { name: 'Abdullah Safras Ahamed', image: 'assets/images/members_avatar/Abdullah-Safras-Ahamed.jpg', role: 'Member', team: 'Media & Social Communication', country: 'Sri Lanka', linkedin: 'https://www.linkedin.com/in/abdullah-safras-07201b3a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
         
         // Academic Support & Development
-        { name: 'Mohamed Hamdan Ameer Irshad', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Academic Support & Development', country: 'Sri Lanka', linkedin: 'https://www.linkedin.com/in/mohamed-hamdan-254927299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
-        { name: 'Jahid Hassan Noor', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Academic Support & Development', country: 'Bangladesh', linkedin: 'https://www.linkedin.com/in/jahid-hassan-noor1/' },
-        { name: 'Hamdha Banu Ainudeen Hasiyar', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Academic Support & Development', country: 'Sri Lanka', linkedin: '#' },
-        { name: 'Raihanah Senan Qaid Ali Al-Garadi', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Academic Support & Development', country: 'Yemen', linkedin: '#' },
+        { name: 'Mohamed Hamdan Ameer Irshad', image: 'assets/images/members_avatar/Mohamed-Hamdan-Ameer-Irshad.jpg', role: 'Member', team: 'Academic Support & Development', country: 'Sri Lanka', linkedin: 'https://www.linkedin.com/in/mohamed-hamdan-254927299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+        { name: 'Jahid Hassan Noor', image: 'assets/images/members_avatar/Jahid-Hassan-Noor.jpg', role: 'Member', team: 'Academic Support & Development', country: 'Bangladesh', linkedin: 'https://www.linkedin.com/in/jahid-hassan-noor1/' },
+        { name: 'Hamdha Banu Ainudeen Hasiyar', image: 'assets/images/members_avatar/Hamdha-Banu-Ainudeen-Hasiyar.jpg', role: 'Member', team: 'Academic Support & Development', country: 'Sri Lanka', linkedin: '#' },
+        { name: 'Raihanah Senan Qaid Ali Al-Garadi', image: 'assets/images/members_avatar/Raihanah-Senan-Qaid-Ali-Al-Garadi.jpg', role: 'Member', team: 'Academic Support & Development', country: 'Yemen', linkedin: '#' },
         
         // Event and Logistics
-        { name: 'Khalid Abdussamii', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Event and Logistics', country: 'Nigeria', linkedin: 'www.linkedin.com/in/khalid-abdussamii-10a66335a' },
-        { name: 'Muhammad Hasnat Anwar', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Event and Logistics', country: 'Pakistan', linkedin: '#' },
-        { name: 'Muhib Nabil Ali Mohsen', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Event and Logistics', country: 'Yemen', linkedin: '#' },
+        { name: 'Khalid Abdussamii', image: 'assets/images/members_avatar/Khalid-Abdussamii.jpg', role: 'Member', team: 'Event and Logistics', country: 'Nigeria', linkedin: 'www.linkedin.com/in/khalid-abdussamii-10a66335a' },
+        { name: 'Muhammad Hasnat Anwar', image: 'assets/images/members_avatar/Muhammad-Hasnat-Anwar.jpg', role: 'Member', team: 'Event and Logistics', country: 'Pakistan', linkedin: '#' },
+        { name: 'Muhib Nabil Ali Mohsen', image: 'assets/images/members_avatar/Muhib-Nabil-Ali-Mohsen.jpg', role: 'Member', team: 'Event and Logistics', country: 'Yemen', linkedin: '#' },
         
         // Welfare & Engagement
-        { name: 'Liyana Affifa', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Welfare & Engagement', country: 'Malaysia', linkedin: '#' },
+        { name: 'Liyana Affifa', image: 'assets/images/members_avatar/Liyana-Afifah-Binti-Amirudin.jpg', role: 'Member', team: 'Welfare & Engagement', country: 'Malaysia', linkedin: '#' },
         
         // Community Outreach & Collaboration
-        { name: 'Usman Anyalo Usman', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Community Outreach & Collaboration', country: 'Nigeria', linkedin: '#' },
-        { name: 'Sankumba Balajo', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Community Outreach & Collaboration', country: 'Gambia', linkedin: '#' },
+        { name: 'Usman Anyalo Usman', image: 'assets/images/members_avatar/Usman-Anyalo-Usman.Jpg', role: 'Member', team: 'Community Outreach & Collaboration', country: 'Nigeria', linkedin: '#' },
+        { name: 'Sankumba Balajo', image: 'assets/images/members_avatar/Sankumba-Balajo.png', role: 'Member', team: 'Community Outreach & Collaboration', country: 'Gambia', linkedin: '#' },
         
         // Tech & Innovation
-        { name: 'Anwar Koji', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Tech & Innovation', country: 'Ethiopia', linkedin: '#' },
-        { name: 'Mohamed Khalid Mohamedahmed Mustafa', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Tech & Innovation', country: 'Sudan', linkedin: 'https://www.linkedin.com/in/mohamed-mustafa-573132270' },
+        { name: 'Anwar Koji', image: 'assets/images/members_avatar/Anwar-Koji.JPG', role: 'Member', team: 'Tech & Innovation', country: 'Ethiopia', linkedin: '#' },
+        { name: 'Mohamed Khalid Mohamedahmed Mustafa', image: 'assets/images/members_avatar/Mohamed-Khalid-Mohamedahmed-Mustafa.jpg', role: 'Member', team: 'Tech & Innovation', country: 'Sudan', linkedin: 'https://www.linkedin.com/in/mohamed-mustafa-573132270' },
         
         // Sports & Recreation
-        { name: 'Barakat Bukola Alli', image: 'assets/images/members_avatar/#', role: 'Member', team: 'Sports & Recreation', country: 'Nigeria', linkedin: '#' }
+        { name: 'Barakat Bukola Alli', image: 'assets/images/members_avatar/Barakat-Bukola-Alli.jpg', role: 'Member', team: 'Sports & Recreation', country: 'Nigeria', linkedin: '#' }
     ]
 };
 
