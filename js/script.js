@@ -11,7 +11,7 @@ const committeeData = {
     advisors: [
         {
             name: 'Associate Professor Dr. Basheer Riskhan',
-            image: 'assets/images/members_avatar/Basheer-Riskhan.jpeg',
+            image: 'assets/images/members_avatar/Basheer-Riskhan.png',
             role: 'Dean',
             team: 'Advisory Board',
             country: 'Sri Lanka',
@@ -80,7 +80,7 @@ const committeeData = {
         },
         {
             name: 'Maryam Hussaina',
-            image: 'assets/images/members_avatar/Maryam-Hussaina.png',
+            image: 'assets/images/members_avatar/Maryam-Hussaina.jpeg',
             role: 'Leader',
             team: 'Event and Logistics',
             country: 'Sri Lanka',
@@ -158,15 +158,15 @@ const committeeData = {
 
 const eventsData = {
     upcoming: [
-        {
-            id: 1,
-            title: 'Launch Of Committee Webpage !',
-            date: 'January 1, 2026',
-            time: '2:00 AM - 10:00 PM',
-            venue: '',
-            description: '» SCI will launch their official webpage, featuring SCI committee values, all members with their key details, event system which will showcase the upcoming and pass events, a comment system that every can share their thoughts, and last but not the least, an official contacts.',
-            poster: 'assets/images/logos/SCI committee Logo.png'
-        },
+        // {
+        //     id: 1,
+        //     title: '',
+        //     date: '',
+        //     time: '',
+        //     venue: '',
+        //     description: '',
+        //     poster: 'assets/images/'
+        // },
 
     ],
     past: [
@@ -191,6 +191,20 @@ const eventsData = {
             ],
             socialLinks: [
                 { name: '<i class="fa-brands fa-instagram"></i>', url: '#' },
+                { name: '<i class="fa-brands fa-linkedin"></i>', url: 'https://www.linkedin.com/company/school-of-computing-informatics-committee-aiu/' }
+            ]
+        },
+        {
+            id: 102,
+            title: 'Launch Of Committee Webpage !',
+            date: 'January 1, 2026',
+            venue: '',
+            description: '» SCI will launch their official webpage, featuring SCI committee values, all members with their key details, event system which will showcase the upcoming and pass events, a comment system that every can share their thoughts, and last but not the least, an official contacts.',
+            images: [
+                'assets/images/logos/SCI committee Logo.png'
+            ],
+            socialLinks: [
+                { name: '<i class="fa-brands fa-instagram"></i>', url: 'https://www.instagram.com/sci.aiu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
                 { name: '<i class="fa-brands fa-linkedin"></i>', url: 'https://www.linkedin.com/company/school-of-computing-informatics-committee-aiu/' }
             ]
         },
@@ -372,7 +386,7 @@ function createEventCard(event, type) {
 
     const posterHTML = isImagePath
         ? `<img src="${event.poster}" alt="${event.title}" class="event-poster-img">`
-        : `<div class="event-icon">${event.poster || '📅'}</div>`;
+        : `<div class="event-icon">${event.poster || '<i class="fa-solid fa-calendar"></i>'}</div>`;
 
     if (type === 'upcoming') {
         return `
@@ -382,7 +396,7 @@ function createEventCard(event, type) {
                         <div class="event-title">${event.title}</div>
                         <div class="event-date">${event.date}</div>
                     </div>
-                    <div>🌐</div>
+                    <div><i class="fa-solid fa-hourglass-start"></i></i></div>
                 </div>
                 <div class="event-details">
                     <div class="event-poster-space">
@@ -390,9 +404,9 @@ function createEventCard(event, type) {
                     </div>
                     <div class="event-description">${event.description}</div>
                     <div class="event-meta">
-                        <div>📅 ${event.date}</div>
-                        <div>🕐 ${event.time}</div>
-                        <div>📍 ${event.venue}</div>
+                        <div><i class="fa-solid fa-calendar"></i> ${event.date}</div>
+                        <div><i class="fa-solid fa-clock"></i> ${event.time}</div>
+                        <div><i class="fa-solid fa-location-dot"></i> ${event.venue}</div>
                     </div>
                     <div class="event-share">
                         <button class="btn-share" onclick="shareEvent('${event.title}')">Share Event »</button>
@@ -408,7 +422,7 @@ function createEventCard(event, type) {
                         <div class="event-title">${event.title}</div>
                         <div class="event-date">${event.date}</div>
                     </div>
-                    <div class="event-icon">✨</div>
+                    <div class="event-icon"><i class="fa-solid fa-hourglass-end"></i></div>
                 </div>
                 <div class="event-details">
                 
@@ -429,8 +443,8 @@ function createEventCard(event, type) {
 <!--            \`;-->
                     <div class="event-description">${event.description}</div>
                     <div class="event-meta">
-                        <div>📅 ${event.date}</div>
-                        <div>📍 ${event.venue}</div>
+                        <div><i class="fa-solid fa-calendar"></i> ${event.date}</div>
+                        <div><i class="fa-solid fa-location-dot"></i> ${event.venue}</div>
                     </div>
                     <div class="social-links">
                         ${event.socialLinks.map(link => `<a href="${link.url}" class="social-link" target="_blank">${link.name}</a>`).join('')}

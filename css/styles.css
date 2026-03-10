@@ -337,6 +337,10 @@ input:focus, textarea:focus, select:focus {
     background-position: center;
     opacity: 0; /* Hidden by default */
     transition: opacity 1.5s ease-in-out; /* The cross-fade speed */
+
+    filter: blur(2px) brightness(40%);
+    /* Optional: scale it up slightly to hide the blurred edges */
+    transform: scale(1.1);
 }
 
 .slide.active {
@@ -356,6 +360,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .hero-content {
+    margin-top: 5%;
     position: relative;
     z-index: 1;
 }
@@ -914,8 +919,8 @@ section:nth-child(even) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--gray-900);
-    color: var(--gray-400);
+    background-color: var(--bg-surface);
+    color: var(--text-main);
     text-align: center;
     font-size: 0.8rem;
     padding: 10px 20px;
