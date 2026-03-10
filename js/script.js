@@ -690,3 +690,5 @@ function setupEventListeners() {
         closeBtn.addEventListener('click', () => modal.classList.remove('show'));
     }
 }
+
+
