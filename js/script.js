@@ -46,7 +46,7 @@ const committeeData = {
         },
         {
             name: 'Win Yan Naing Htut',
-            image: 'assets/images/members_avatar/Win-yan-Naing-Htut.jpeg',
+            image: 'assets/images/members_avatar/Win-Yan-Naing-Htut.jpeg',
             role: 'Treasurer',
             team: 'Top Committee',
             country: 'Myanmar',
@@ -56,7 +56,7 @@ const committeeData = {
     leaders: [
         {
             name: 'Ridwan Afolabi Muhammad',
-            image: 'assets/images/members_avatar/Ridwan-Afolabi-muhammad.jpg',
+            image: 'assets/images/members_avatar/Ridwan-Afolabi-Muhammad.JPG',
             role: 'Committee Advisor',
             team: 'Advisory Board',
             country: 'Nigeria',
@@ -64,7 +64,7 @@ const committeeData = {
         },
         {
             name: 'Aung Zay Yan Phyo',
-            image: 'assets/images/members_avatar/#',
+            image: 'assets/images/members_avatar/Aung-Zay-Yan-Phyo.jpeg',
             role: 'Leader',
             team: 'Media & Social Communication',
             country: 'Myanmar',
@@ -72,7 +72,7 @@ const committeeData = {
         },
         {
             name: 'Nay Paing Oo',
-            image: 'assets/images/members_avatar/Nay-paing-Oo.jpg',
+            image: 'assets/images/members_avatar/Nay-Paing-Oo.JPG',
             role: 'Leader',
             team: 'Academic Support & Development',
             country: 'Myanmar',
@@ -133,8 +133,8 @@ const committeeData = {
         
         // Event and Logistics
         { name: 'Khalid Abdussamii', image: 'assets/images/members_avatar/Khalid-Abdussamii.jpg', role: 'Member', team: 'Event and Logistics', country: 'Nigeria', linkedin: 'www.linkedin.com/in/khalid-abdussamii-10a66335a' },
-        { name: 'Muhammad Hasnat Anwar', image: 'assets/images/members_avatar/Muhammad-Hasnat-Anwar.jpg', role: 'Member', team: 'Event and Logistics', country: 'Pakistan', linkedin: '#' },
-        { name: 'Muhib Nabil Ali Mohsen', image: 'assets/images/members_avatar/Muhib-Nabil-Ali-Mohsen.jpg', role: 'Member', team: 'Event and Logistics', country: 'Yemen', linkedin: '#' },
+        { name: 'Muhammad Hasnat Anwar', image: 'assets/images/members_avatar/Muhammad-Hasnat-Anwar.jpg', role: 'Member', team: 'Event and Logistics', country: 'Pakistan', linkedin: 'www.linkedin.com/in/muhammad-hasnat-anwer-358384311' },
+        { name: 'Muhib Nabil Ali Mohsen', image: 'assets/images/members_avatar/Muhib-Nabil-Ali-Mohsen.jpg', role: 'Member', team: 'Event and Logistics', country: 'Yemen', linkedin: 'https://www.linkedin.com/in/muhib-nabil' },
         
         // Welfare & Engagement
         { name: 'Liyana Affifa', image: 'assets/images/members_avatar/Liyana-Afifah-Binti-Amirudin.jpg', role: 'Member', team: 'Welfare & Engagement', country: 'Malaysia', linkedin: '#' },
